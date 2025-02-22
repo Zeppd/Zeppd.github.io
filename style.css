@@ -1,0 +1,159 @@
+
+/* Reset dasar */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {   
+    font-family: "Poppins", serif;
+    line-height: 1.6;
+}
+
+
+
+/* Navigasi */
+.navbar {
+    background-color: #4CAF50;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Konten Utama */
+.container {
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #f0f0f0;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Kartu */
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.content1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    margin-bottom: 1rem;
+}
+
+.card2 {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card h2 {
+    color: #4CAF50;
+    margin-bottom: 0.5rem;
+}
+
+.card2 h2 {
+    color: #4CAF50;
+    margin-bottom: 0.5rem;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 100px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    
+    .hero {
+        padding: 2rem 0;
+    }
+    
+    .card {
+        width: 100%;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 720px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+</style>
+
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
