@@ -12,6 +12,8 @@ html, body {
     height: 100%;
     font-family: "Poppins", serif;
     line-height: 1.6;
+    background-color: #333; /* Warna abu-abu gelap */
+    color: #fff; /* Warna teks putih untuk kontras */
 }
 
 body {
@@ -26,7 +28,7 @@ body {
 
 /* Navigasi */
 .navbar {
-    background-color: #4CAF50;
+    background-color: #008080; /* Warna hijau teal */
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -53,7 +55,7 @@ body {
 .hero {
     text-align: center;
     padding: 4rem 0;
-    background-color: #f0f0f0;
+    background-color: #444; /* Warna abu-abu gelap */
     margin-bottom: 2rem;
     border-radius: 8px;
 }
@@ -80,7 +82,7 @@ body {
 }
 
 .card {
-    background-color: white;
+    background-color: #555; /* Warna abu-abu gelap */
     padding: 1.5rem;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -89,7 +91,7 @@ body {
 }
 
 .card2 {
-    background-color: white;
+    background-color: #555; /* Warna abu-abu gelap */
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -97,12 +99,12 @@ body {
 }
 
 .card h2 {
-    color: #4CAF50;
+    color: #008080; /* Warna hijau teal */
     margin-bottom: 0.5rem;
 }
 
 .card2 h2 {
-    color: #4CAF50;
+    color: #008080; /* Warna hijau teal */
     margin-bottom: 0.5rem;
 }
 
@@ -113,7 +115,7 @@ body {
 
 /* Footer */
 footer {
-    background-color: #4CAF50;
+    background-color: #008080; /* Warna hijau teal */
     color: white;
     text-align: center;
     padding: 1rem;
