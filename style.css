@@ -14,6 +14,7 @@ html, body {
     line-height: 1.6;
     background-color: #333; /* Warna abu-abu gelap */
     color: #fff; /* Warna teks putih untuk kontras */
+    scroll-behavior: smooth; /* Animasi scroll yang halus */
 }
 
 body {
@@ -21,11 +22,17 @@ body {
     flex-direction: column;
 }
 
-.container {
+.container, .home-container, .toko-container, .kontak-container {
     flex: 1;
     padding: 2rem;
+    padding-top: 80px; /* Sesuaikan dengan tinggi navbar */
 }
 
+.home-container {
+    flex: 1;
+    padding: 2rem;
+    padding-top: 150px;
+}
 /* Navigasi */
 .navbar {
     background-color: #008080; /* Warna hijau teal */
@@ -33,6 +40,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Pastikan navbar berada di atas elemen lainnya */
 }
 
 .logo {
