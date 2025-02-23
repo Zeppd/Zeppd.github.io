@@ -6,11 +6,11 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
 html, body {
     height: 100%;
-    font-family: "Nunito", sans-serif;
+    font-family: "Poppins", sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4; /* Warna latar belakang yang lebih terang */
     color: #333333; /* Warna teks yang lebih gelap untuk kontras */
@@ -73,20 +73,36 @@ body {
 
 /* Konten Utama */
 .hero {
+    position: relative;
     text-align: center;
     padding: 4rem 0;
-    background-color: #444444; /* Warna abu-abu gelap */
+    background-image: url('/img/logo\ hitam.png'); /* Ganti dengan path ke foto Anda */
+    background-size: cover; /* Menutupi seluruh area hero */
+    background-position: center; /* Pusatkan gambar */
     margin-bottom: 2rem;
     border-radius: 8px;
     color: white; /* Warna teks putih untuk kontras */
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Warna hitam dengan opasitas 50% */
+    border-radius: 8px;
+}
+
 .hero h1 {
-    font-size: 2.5rem;
+    position: relative;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .hero p {
+    position: relative;
     font-size: 1.2rem;
 }
 
@@ -196,7 +212,7 @@ footer {
 }
 
 .poppins-regular {
-    font-family: "Nunito", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
