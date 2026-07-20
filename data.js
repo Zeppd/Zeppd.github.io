@@ -58,7 +58,7 @@ const DATA_MESIN = [
     kategori: "Mesin Pencacah",
     nama: "Mesin Wood Chipper",
     kodeModel: "WCP-15",
-    gambar: "https://placehold.co/600x450/1b2632/f3f2ee?text=WCP-15",
+    gambar: "/images/WCP.jpg",
     spesifikasiSingkat: [
       "Kapasitas ± 1000 kg/jam",
       "Penggerak bensin 15 HP",
@@ -81,7 +81,7 @@ const DATA_MESIN = [
     kategori: "Mesin Penggiling",
     nama: "Mesin Diskmill",
     kodeModel: "DSM-370",
-    gambar: "https://placehold.co/600x450/1b2632/f3f2ee?text=DSM-370",
+    gambar: "/images/DSM.png",
     spesifikasiSingkat: [
       "Kapasitas 150 - 180 kg/jam",
       "Penggerak diesel 12 HP",
@@ -148,22 +148,22 @@ const DATA_MESIN = [
   {
     id: 6,
     kategori: "Mesin Pengadukan",
-    nama: "Mesin Mixer Pakan Ternak",
-    kodeModel: "MPT-200",
-    gambar: "https://placehold.co/600x450/1b2632/f3f2ee?text=MPT-200",
+    nama: "Mesin Mixer Horizontal (Ribbon Blender)",
+    kodeModel: "MMH-200",
+    gambar: "/images/MMH.png",
     spesifikasiSingkat: [
       "Kapasitas 200 - 250 kg/proses",
-      "Tipe horizontal ribbon mixer",
-      "Hasil campuran homogen & merata",
-      "Material body plat besi/galvanis"
+      "Sistem pengaduk Horizontal Ribbon Blender",
+      "Hasil pencampuran homogen, cepat, dan merata",
+      "Cocok untuk pakan ternak, pupuk, kompos, dan berbagai bahan serbuk maupun granular"
     ],
     deskripsi:
-      "Mesin pengaduk pakan ternak untuk mencampur tepung, konsentrat, dan bahan tambahan menjadi adonan pakan yang homogen. Sistem pengadukan horizontal memastikan seluruh bahan tercampur merata dalam waktu singkat.",
+      "Mesin Mixer Horizontal (Ribbon Blender) dirancang untuk mencampur bahan secara cepat dan merata. Cocok digunakan untuk pakan ternak, pupuk, kompos, serta berbagai bahan berbentuk serbuk maupun granula. Konstruksi kokoh, mudah dioperasikan, dan menghasilkan campuran yang homogen.",
     spesifikasiLengkap: [
       { label: "Kapasitas", nilai: "200 - 250 kg/proses" },
-      { label: "Tipe", nilai: "Horizontal Ribbon Mixer" },
-      { label: "Dimensi (P x L x T)", nilai: "200 x 100 x 125 cm" },
-      { label: "Material Body", nilai: "Plat Besi / Galvanis" },
+      { label: "Tipe Pengaduk", nilai: "Horizontal Ribbon Blender (Double Ribbon)" },
+      { label: "Material Body", nilai: "2Plat Besi Mild Steel / Galvanis (opsional Stainless Steel)" },
+      { label: "Sistem Penggerak", nilai: "Motor Listrik + Gear Reducer" },
       { label: "Waktu Pengadukan", nilai: "± 15 - 20 menit/proses" }
     ],
     harga: ""
