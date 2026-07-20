@@ -47,6 +47,8 @@ function isiProfilPerusahaan() {
   document.getElementById("contactEmailText").textContent = p.email;
 
   document.getElementById("contactAddress").textContent = p.alamat;
+  document.getElementById("contactAddressLink").href =
+    p.linkMaps || ("https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(p.alamat));
 }
 
 /* ---------- Filter kategori ---------- */

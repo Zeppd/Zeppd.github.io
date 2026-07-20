@@ -162,7 +162,7 @@ const DATA_MESIN = [
     spesifikasiLengkap: [
       { label: "Kapasitas", nilai: "200 - 250 kg/proses" },
       { label: "Tipe Pengaduk", nilai: "Horizontal Ribbon Blender (Double Ribbon)" },
-      { label: "Material Body", nilai: "2Plat Besi Mild Steel / Galvanis (opsional Stainless Steel)" },
+      { label: "Material Body", nilai: "2Plat Besi Mild Steel / Galvanis" },
       { label: "Sistem Penggerak", nilai: "Motor Listrik + Gear Reducer" },
       { label: "Waktu Pengadukan", nilai: "± 15 - 20 menit/proses" }
     ],
@@ -170,6 +170,29 @@ const DATA_MESIN = [
   },
   {
     id: 7,
+    kategori: "Mesin Pengadukan",
+    nama: "Mesin Mixer Horizontal Stainless Steel (Ribbon Blender)",
+    kodeModel: "MMHS-200",
+    gambar: "/images/MMHS.png",
+    spesifikasiSingkat: [
+      "Kapasitas 200 - 250 kg/proses",
+      "Material tabung Stainless Steel Food Grade",
+      "Hasil pencampuran homogen, cepat, dan merata",
+      "Cocok untuk pakan ternak, pupuk, kompos, dan berbagai bahan serbuk maupun granular"
+    ],
+    deskripsi:
+      "Mesin Mixer Horizontal Stainless Steel dirancang untuk mencampur berbagai bahan secara cepat dan homogen. Menggunakan sistem pengaduk ribbon horizontal dengan material food grade sehingga cocok digunakan untuk industri pakan, makanan, herbal, dan berbagai bahan serbuk maupun granula.",
+    spesifikasiLengkap: [
+      { label: "Kapasitas", nilai: "200 - 250 kg/proses" },
+      { label: "Material Tabung", nilai: "Stainless Steel 304 (Food Grade)" },
+      { label: "Tipe Pengaduk", nilai: "Horizontal Ribbon Blender" },
+      { label: "Sistem Penggerak", nilai: "Motor Listrik + Gear Reducer" },
+      { label: "Aplikasi Penggunaan", nilai: "Pakan ternak, tepung, bumbu, kopi, herbal, kompos, dan bahan granular" }
+    ],
+    harga: ""
+  },
+  {
+    id: 8,
     kategori: "Mesin Pencetak Pelet",
     nama: "Mesin Granulator Pelet",
     kodeModel: "GRN-150",
@@ -223,11 +246,12 @@ const DATA_MESIN = [
    atau strip). Contoh nomor 0856-4997-2277 ditulis: "6285649972277"
    ============================================================ */
 const PROFIL_PERUSAHAAN = {
-  namaPerusahaan: "Bengkel Las JoyoLanggeng Teknik",
+  namaPerusahaan: "Bengkel Las Bubut JoyoLanggeng Teknik",
   tagline: "Mesin Pengolahan Pakan Ternak & Hasil Pertanian yang Tangguh dan Terpercaya",
   deskripsiSingkat:
     "Kami membuat dan menyediakan mesin-mesin pengolahan pakan ternak dan hasil pertanian, mulai dari mesin pencacah, penggiling, pengering, pengaduk, hingga pencetak pelet. Dipercaya oleh peternak dan pelaku usaha pakan di berbagai daerah.",
   alamat: "Desa Bendosewu, Kecamatan Talun, Kabupaten Blitar, Jawa Timur, Indonesia",
+  linkMaps: "https://maps.app.goo.gl/kzCD9VFC8LuTyA9h8",
   telepon: "+62 856-4997-2277",
   nomorWhatsapp: "6285649972277",
   email: "joyolanggeng@gmail.com",
