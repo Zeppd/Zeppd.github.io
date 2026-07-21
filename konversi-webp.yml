@@ -1,0 +1,55 @@
+# ============================================================
+# OTOMATIS KONVERSI GAMBAR KE WEBP
+# ============================================================
+# Setiap kali ada foto baru (.jpg/.jpeg/.png) yang di-commit ke
+# folder images/, GitHub akan otomatis menjalankan skrip
+# konversi_ke_webp.py di servernya, lalu meng-commit balik hasil
+# .webp ke folder imgwebp/ pada repo ini. Anda tidak perlu install
+# Python atau menjalankan apa pun di komputer sendiri.
+#
+# SATU KALI SETUP YANG WAJIB DILAKUKAN (tanpa ini, Action akan
+# gagal saat mencoba commit balik hasilnya):
+#   1. Buka repo ini di GitHub -> Settings -> Actions -> General
+#   2. Scroll ke bagian "Workflow permissions"
+#   3. Pilih "Read and write permissions"
+#   4. Klik Save
+# ============================================================
+
+name: Konversi Gambar ke WebP
+
+"on":
+  push:
+    paths:
+      - "images/**"
+
+permissions:
+  contents: write
+
+jobs:
+  konversi:
+    runs-on: ubuntu-latest
+    # Cegah Action memicu dirinya sendiri berulang-ulang
+    if: "!contains(github.event.head_commit.message, '[auto-webp]')"
+
+    steps:
+      - name: Ambil kode repo
+        uses: actions/checkout@v4
+
+      - name: Siapkan Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Pillow
+        run: pip install Pillow
+
+      - name: Jalankan konversi ke WebP
+        run: python konversi_ke_webp.py
+
+      - name: Commit hasil webp (kalau ada perubahan)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add imgwebp/
+          git diff --cached --quiet || git commit -m "Auto-convert gambar ke WebP [auto-webp]"
+          git push

@@ -21,9 +21,10 @@
    - kodeModel    : kode/tipe model mesin (tampil seperti plat nama)
    - gambar       : link/alamat gambar. Bisa link internet (https://...)
                      atau file lokal di folder images/ (contoh: "images/mesin1.jpg").
-                     Disarankan pakai format .webp (ukuran file lebih kecil,
-                     web jadi lebih cepat) — bisa dikonversi otomatis dari
-                     .jpg/.png pakai skrip konversi_ke_webp.py yang disertakan.
+                     Disarankan pakai format .webp dari folder imgwebp/
+                     (ukuran file lebih kecil, web jadi lebih cepat) — bisa
+                     dikonversi otomatis dari .jpg/.png di folder images/
+                     pakai konversi_ke_webp.py, lihat PANDUAN.md.
    - spesifikasiSingkat : 3-4 poin spesifikasi paling penting, muncul di kartu
    - deskripsi    : deskripsi lengkap, muncul saat kartu diklik (detail)
    - spesifikasiLengkap : daftar spesifikasi teknis lengkap (tabel)
@@ -61,7 +62,7 @@ const DATA_MESIN = [
     kategori: "Mesin Pencacah",
     nama: "Mesin Wood Chipper",
     kodeModel: "WCP-15",
-    gambar: "images/WCP.webp",
+    gambar: "/imgop/WCP.webp",
     spesifikasiSingkat: [
       "Kapasitas ± 1000 kg/jam",
       "Penggerak bensin 15 HP",
@@ -84,7 +85,7 @@ const DATA_MESIN = [
     kategori: "Mesin Penggiling",
     nama: "Mesin Diskmill",
     kodeModel: "DSM-370",
-    gambar: "images/DSM.webp",
+    gambar: "/imgop/DSM.webp",
     spesifikasiSingkat: [
       "Kapasitas 150 - 180 kg/jam",
       "Penggerak diesel 12 HP",
@@ -130,7 +131,7 @@ const DATA_MESIN = [
     kategori: "Mesin Pengeringan",
     nama: "Mesin Oven Pengering",
     kodeModel: "OVP-12R",
-    gambar: "https://placehold.co/600x450/1b2632/f3f2ee?text=OVP-12R",
+    gambar: "/imgop/OVP.webp",
     spesifikasiSingkat: [
       "Kapasitas 12 rak (± 100 kg)",
       "Sumber panas kompor LPG / heater listrik",
@@ -153,7 +154,7 @@ const DATA_MESIN = [
     kategori: "Mesin Pengadukan",
     nama: "Mesin Mixer Horizontal (Ribbon Blender)",
     kodeModel: "MMH-200",
-    gambar: "images/MMH.webp",
+    gambar: "/imgop/MMH.webp",
     spesifikasiSingkat: [
       "Kapasitas 200 - 250 kg/proses",
       "Sistem pengaduk Horizontal Ribbon Blender",
@@ -176,7 +177,7 @@ const DATA_MESIN = [
     kategori: "Mesin Pengadukan",
     nama: "Mesin Mixer Horizontal Stainless Steel (Ribbon Blender)",
     kodeModel: "MMHS-200",
-    gambar: "images/MMHS.webp",
+    gambar: "/imgop/MMHS.webp",
     spesifikasiSingkat: [
       "Kapasitas 200 - 250 kg/proses",
       "Material tabung Stainless Steel Food Grade",
@@ -216,8 +217,30 @@ const DATA_MESIN = [
       { label: "Hasil Olahan", nilai: "Pelet pakan ternak, pakan ikan, biomassa" }
     ],
     harga: ""
+  },
+  {
+    id: 8,
+    kategori: "Mesin Pengupas",
+    nama: "Mesin Pengupas Kelapa",
+    kodeModel: "MPK-120",
+    gambar: "/imgop/MPK.webp",
+    spesifikasiSingkat: [
+      "Kapasitas 100 - 150 kg/jamKapasitas 100 - 150 kg/jam",
+      "Sistem pengupas rol abrasif",
+      "Mengupas kulit ari kelapa lebih bersih dan merata",
+      "Cocok untuk UMKM, industri kelapa, dan pengolahan santan"
+    ],
+    deskripsi:
+      "Mesin Pengupas Kelapa dirancang untuk mengupas kulit ari kelapa secara cepat, bersih, dan merata. Dilengkapi sistem rol abrasif yang efektif mengurangi waktu kerja sehingga cocok digunakan untuk usaha pengolahan kelapa skala kecil hingga industri.",
+    spesifikasiLengkap: [
+      { label: "Dimensi (P × L × T)", nilai: "1100 × 550 × 900 mm" },
+      { label: "Material Rangka", nilai: "UNP 6" },
+      { label: "Material Body", nilai: "Plat Besi 2,0 mm" },
+      { label: "Penggerak", nilai: "Engine 6,5 HP" },
+      { label: "Bahan Bakar", nilai: "Bensin" }
+    ],
+    harga: ""
   }
-
   /* ---- TAMBAHKAN MESIN BARU DI BAWAH INI ----
   ,{
     id: 9,
@@ -257,6 +280,6 @@ const PROFIL_PERUSAHAAN = {
   linkMaps: "https://maps.app.goo.gl/kzCD9VFC8LuTyA9h8",
   telepon: "+62 856-4997-2277",
   nomorWhatsapp: "6285649972277",
-  email: "joyolanggeng@gmail.com",
+  email: "joyolanggengteknik5@gmail.com",
   jamOperasional: "Senin - Sabtu, 08.30 - 16.30 WIB"
 };
