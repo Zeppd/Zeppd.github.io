@@ -213,6 +213,23 @@ const DATA_MESIN = [
       { label: "Hasil Olahan", nilai: "Pelet pakan ternak, pakan ikan, biomassa" }
     ],
     harga: ""
+  },
+  {
+    id: 9,
+    kategori: "Lainnya",
+    nama: "Mesin Acak",
+    kodeModel: "CTH-001",
+    gambar: "https://placehold.co/600x450/1b2632/f3f2ee?text=CTH-001",
+    spesifikasiSingkat: [
+      "Poin spesifikasi 1",
+      "Poin spesifikasi 2",
+      "Poin spesifikasi 3"
+    ],
+    deskripsi: "Tulis deskripsi lengkap mesin di sini.",
+    spesifikasiLengkap: [
+      { label: "Nama Spesifikasi", nilai: "Nilai" }
+    ],
+    harga: ""
   }
 
   /* ---- TAMBAHKAN MESIN BARU DI BAWAH INI ----
