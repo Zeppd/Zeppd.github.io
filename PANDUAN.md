@@ -3,12 +3,28 @@
 ## Struktur File
 ```
 mesin-katalog/
-├── index.html     ← struktur halaman (jarang perlu diubah)
-├── style.css      ← tampilan & warna (jarang perlu diubah)
-├── script.js      ← logika halaman (tidak perlu diubah)
-├── data.js        ← DATA KATALOG — ini yang Anda edit sehari-hari
-└── images/        ← taruh foto mesin Anda di sini (opsional)
+├── index.html            ← struktur halaman (jarang perlu diubah)
+├── style.css              ← tampilan & warna (jarang perlu diubah)
+├── script.js               ← logika halaman (tidak perlu diubah)
+├── data.js                 ← DATA KATALOG — ini yang Anda edit sehari-hari
+├── favicon.svg           ← ikon kecil di tab browser
+├── konversi_ke_webp.py    ← skrip bantu, kecilkan ukuran foto sebelum upload
+└── images/                ← taruh foto mesin Anda di sini
 ```
+
+## Membuat Foto Lebih Ringan (Sebelum Upload)
+Supaya website tetap cepat dibuka, sebaiknya foto dikonversi ke format WEBP
+dulu sebelum dipakai:
+1. Taruh semua foto mentah (.jpg/.png) di folder `images/`
+2. Buka terminal/command prompt di folder website ini, jalankan:
+   ```
+   pip install Pillow
+   python konversi_ke_webp.py
+   ```
+3. Skrip akan membuat versi `.webp` dari tiap foto (otomatis dikecilkan juga
+   kalau resolusinya kelewat besar), tanpa menghapus file aslinya
+4. Di `data.js`, arahkan field `gambar` ke file `.webp` yang baru dibuat,
+   contoh: `gambar: "images/chopper-rumput.webp"`
 
 ## Menambah Mesin Baru
 1. Buka file **data.js** dengan aplikasi Notepad atau editor teks apa pun.

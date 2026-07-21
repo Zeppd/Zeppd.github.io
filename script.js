@@ -33,7 +33,7 @@ function isiProfilPerusahaan() {
   document.getElementById("heroDesc").textContent = p.deskripsiSingkat;
   document.getElementById("footerName").textContent = p.namaPerusahaan;
   document.getElementById("footerHours").textContent = p.jamOperasional;
-  document.title = p.namaPerusahaan + " — Katalog Mesin Industri";
+  document.title = p.namaPerusahaan + " — Katalog Mesin Pengolahan Pakan Ternak";
 
   const nomorWA = bersihkanNomorWA(p.nomorWhatsapp);
   const waLink = `https://wa.me/${nomorWA}?text=${encodeURIComponent("Halo, saya ingin bertanya tentang katalog mesin Anda.")}`;
@@ -49,6 +49,14 @@ function isiProfilPerusahaan() {
   document.getElementById("contactAddress").textContent = p.alamat;
   document.getElementById("contactAddressLink").href =
     p.linkMaps || ("https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(p.alamat));
+}
+
+/* ---------- Gambar cadangan kalau file gambar tidak ditemukan ----------
+   Berguna saat baru menambah mesin dan nama file gambar di data.js
+   salah ketik — daripada tampil ikon gambar rusak, tampilkan placeholder
+   ini supaya jelas bahwa gambarnya perlu dicek ulang. */
+function gambarCadangan(namaMesin) {
+  return `https://placehold.co/600x450/1b2632/f3f2ee?text=${encodeURIComponent(namaMesin)}`;
 }
 
 /* ---------- Filter kategori ---------- */
@@ -90,7 +98,8 @@ function renderKatalog(kategori) {
     return `
       <article class="machine-card" data-id="${m.id}" tabindex="0">
         <div class="machine-card-media">
-          <img src="${m.gambar}" alt="${m.nama}" loading="lazy">
+          <img src="${m.gambar}" alt="${m.nama}" loading="lazy"
+               onerror="this.onerror=null; this.src='${gambarCadangan(m.nama)}';">
         </div>
         <div class="machine-card-body">
           <span class="machine-kode">${m.kodeModel}</span>
@@ -131,7 +140,8 @@ function bukaModal(id) {
   const waLink = `https://wa.me/${nomorWA}?text=${encodeURIComponent("Halo, saya tertarik dengan " + m.nama + " (" + m.kodeModel + "). Bisa minta info lebih lanjut?")}`;
 
   document.getElementById("modalContent").innerHTML = `
-    <div class="modal-media"><img src="${m.gambar}" alt="${m.nama}"></div>
+    <div class="modal-media"><img src="${m.gambar}" alt="${m.nama}"
+         onerror="this.onerror=null; this.src='${gambarCadangan(m.nama)}';"></div>
     <div class="modal-body">
       <span class="modal-kode">${m.kodeModel} — ${m.kategori}</span>
       <h3 id="modalTitle">${m.nama}</h3>

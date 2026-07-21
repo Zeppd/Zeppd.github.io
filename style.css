@@ -422,7 +422,7 @@ p { margin: 0 0 12px; }
   padding: 22px;
   transition: border-color .15s ease, transform .15s ease;
 }
-.contact-card:not(.contact-card-static):hover {
+.contact-card:hover {
   border-color: var(--color-accent);
   transform: translateY(-2px);
 }

@@ -20,7 +20,10 @@
    - nama         : nama mesin yang tampil besar di kartu
    - kodeModel    : kode/tipe model mesin (tampil seperti plat nama)
    - gambar       : link/alamat gambar. Bisa link internet (https://...)
-                     atau file lokal di folder images/ (contoh: "images/mesin1.jpg")
+                     atau file lokal di folder images/ (contoh: "images/mesin1.jpg").
+                     Disarankan pakai format .webp (ukuran file lebih kecil,
+                     web jadi lebih cepat) — bisa dikonversi otomatis dari
+                     .jpg/.png pakai skrip konversi_ke_webp.py yang disertakan.
    - spesifikasiSingkat : 3-4 poin spesifikasi paling penting, muncul di kartu
    - deskripsi    : deskripsi lengkap, muncul saat kartu diklik (detail)
    - spesifikasiLengkap : daftar spesifikasi teknis lengkap (tabel)
@@ -58,7 +61,7 @@ const DATA_MESIN = [
     kategori: "Mesin Pencacah",
     nama: "Mesin Wood Chipper",
     kodeModel: "WCP-15",
-    gambar: "/images/WCP.jpg",
+    gambar: "images/WCP.webp",
     spesifikasiSingkat: [
       "Kapasitas ± 1000 kg/jam",
       "Penggerak bensin 15 HP",
@@ -81,7 +84,7 @@ const DATA_MESIN = [
     kategori: "Mesin Penggiling",
     nama: "Mesin Diskmill",
     kodeModel: "DSM-370",
-    gambar: "/images/DSM.png",
+    gambar: "images/DSM.webp",
     spesifikasiSingkat: [
       "Kapasitas 150 - 180 kg/jam",
       "Penggerak diesel 12 HP",
@@ -150,7 +153,7 @@ const DATA_MESIN = [
     kategori: "Mesin Pengadukan",
     nama: "Mesin Mixer Horizontal (Ribbon Blender)",
     kodeModel: "MMH-200",
-    gambar: "/images/MMH.png",
+    gambar: "images/MMH.webp",
     spesifikasiSingkat: [
       "Kapasitas 200 - 250 kg/proses",
       "Sistem pengaduk Horizontal Ribbon Blender",
@@ -162,7 +165,7 @@ const DATA_MESIN = [
     spesifikasiLengkap: [
       { label: "Kapasitas", nilai: "200 - 250 kg/proses" },
       { label: "Tipe Pengaduk", nilai: "Horizontal Ribbon Blender (Double Ribbon)" },
-      { label: "Material Body", nilai: "2Plat Besi Mild Steel / Galvanis" },
+      { label: "Material Body", nilai: "Plat Besi Mild Steel / Galvanis" },
       { label: "Sistem Penggerak", nilai: "Motor Listrik + Gear Reducer" },
       { label: "Waktu Pengadukan", nilai: "± 15 - 20 menit/proses" }
     ],
@@ -173,7 +176,7 @@ const DATA_MESIN = [
     kategori: "Mesin Pengadukan",
     nama: "Mesin Mixer Horizontal Stainless Steel (Ribbon Blender)",
     kodeModel: "MMHS-200",
-    gambar: "/images/MMHS.png",
+    gambar: "images/MMHS.webp",
     spesifikasiSingkat: [
       "Kapasitas 200 - 250 kg/proses",
       "Material tabung Stainless Steel Food Grade",
@@ -213,28 +216,11 @@ const DATA_MESIN = [
       { label: "Hasil Olahan", nilai: "Pelet pakan ternak, pakan ikan, biomassa" }
     ],
     harga: ""
-  },
-  {
-    id: 9,
-    kategori: "Lainnya",
-    nama: "Mesin Acak",
-    kodeModel: "CTH-001",
-    gambar: "https://placehold.co/600x450/1b2632/f3f2ee?text=CTH-001",
-    spesifikasiSingkat: [
-      "Poin spesifikasi 1",
-      "Poin spesifikasi 2",
-      "Poin spesifikasi 3"
-    ],
-    deskripsi: "Tulis deskripsi lengkap mesin di sini.",
-    spesifikasiLengkap: [
-      { label: "Nama Spesifikasi", nilai: "Nilai" }
-    ],
-    harga: ""
   }
 
   /* ---- TAMBAHKAN MESIN BARU DI BAWAH INI ----
   ,{
-    id: 8,
+    id: 9,
     kategori: "Kategori Mesin Anda",
     nama: "Nama Mesin",
     kodeModel: "KODE-MODEL",
